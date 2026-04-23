@@ -1,0 +1,23 @@
+/* for hide horizontal scrollbar */
+html, body {
+    overflow-x: hidden;
+}
+
+/* style for slidebar */
+  /* Default black text */
+  .sidebar .nav-link {
+    color: black !important;
+    transition: all 0.2s ease; /* smooth zoom */
+  }
+
+  /* Hover effect (zoom + green text) */
+  .sidebar .nav-link:hover {
+    color: rgb(59, 129, 59) !important;
+    transform: scale(1.1);
+  }
+
+  /* Active (current page link) */
+  .sidebar .nav-link.active {
+    color: rgb(0, 138, 0) !important;
+    font-weight: bold;
+  }

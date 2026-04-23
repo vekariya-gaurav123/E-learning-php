@@ -1,0 +1,12 @@
+#.htaccess use for Increase video file size in(mb) without touch php.ini file
+
+# ✅ Allow big uploads (up to 1GB)
+php_value upload_max_filesize 1024M
+php_value post_max_size 1024M
+
+# ✅ Allow scripts to run longer
+php_value max_execution_time 2000
+php_value max_input_time 2000
+
+# ✅ Increase memory for processing large uploads
+php_value memory_limit 1024M

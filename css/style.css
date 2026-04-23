@@ -1,0 +1,104 @@
+body {
+  padding-top: 50px;
+  /* slightly more than navbar height */
+}
+
+/* for hide horizontal scrollbar */
+html, body {
+    overflow-x: hidden;
+}
+
+.navbar {
+  background-color: black;
+  padding: 0px 15px;
+  max-height: 65px;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Navbar links - all white */
+.custom-nav-item .nav-link {
+  position: relative;
+  color: #ffffff !important;
+  /* all links white */
+  margin: 0 10px;
+  padding: 5px 0;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* Underline effect */
+.custom-nav-item .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  /* underline color */
+  transform: translateX(-50%);
+  transition: width 0.3s;
+}
+
+/* Hover underline */
+.custom-nav-item .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active underline */
+.custom-nav-item .nav-link.active::after {
+  width: 100%;
+}
+
+.custom-nav-btn a {
+  border-radius: 20px !important;
+}
+
+/* Banner styles */
+.banner {
+  height: 450px;
+  /* height of the banner */
+  width: 100%;
+  /* full page width */
+
+  /* add background image */
+  background: url('../image/coursebanner.jpg') center center/cover no-repeat;
+
+  /* add transparent black layer on top of image */
+  background-color: rgba(0, 0, 0, 0.5);
+
+  /* blend the image and color together */
+  background-blend-mode: overlay;
+
+  /* center text inside */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* course card hover effect */
+/* Add this to your CSS (e.g., in your main CSS file or inside <style> tag) */
+.course-card {
+  border-radius: 20px;
+  overflow: hidden;
+  /* ensure child elements don't overflow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* smooth animation */
+}
+
+.course-card:hover {
+  transform: scale(1.03);
+  /* make it slightly bigger */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* add shadow for depth */
+  z-index: 10;
+  /* keep it above other cards */
+}
